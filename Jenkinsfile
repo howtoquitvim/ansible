@@ -3,9 +3,11 @@ pipeline {
         imagename = "fateevilia/epamexam"
         app_url = "http://192.168.0.17:88"
     }
+
     agent {
-       JenkAgent
+     label 'JenkAgent'
     }
+
     stages {
         stage('Deploy') {
             steps {
